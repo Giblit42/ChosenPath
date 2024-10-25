@@ -58,18 +58,22 @@ public class infoChain {
 		//Take new path
 		if(response.equals("A") || response.equals("a")){
 			System.out.println("You turn the alram clock to see what time it is,and see that you have 3 more hours until you go into work\n");
-				Thread.sleep(2500);				// slow down options to give ample time for the user to read options
+			Thread.sleep(2500);				// slow down options to give ample time for the user to read options
+
+			System.out.println("next branch from A");
 		}
 		
 		if(response.equals("B") || response.equals("b")) {	//user choose b
 			System.out.println("You move closer to the foot of the bed and begin to stroke the fuzzy fat ball until you hear him begin to purr.\n");
 
 			Thread.sleep(2500);			// slow down options to give ample time for the user to read options
+			System.out.println("next branch from B");
 		}
 
 		if(response.equals("C") || response.equals("c")){
 			System.out.println("You close your eyes until you drift back off to sleep");
 			Thread.sleep(2500);
+			System.out.println("next branch from C");
 		}
 	}
 
