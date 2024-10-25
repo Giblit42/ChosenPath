@@ -32,10 +32,31 @@ public class infoChain {
 		playerTurn(myObj);
 	}
 
-	private static void playerTurn(Scanner scanner){
+	private static void playerTurn(Scanner scanner)throws InterruptedException{
         String userInput;
         while(true){
-            System.out.println("Please select your choice");
+
+			//Start asking the player story questions here
+            System.out.println("You awake in a dark room to your left is an alarm clock on a night stand\n");
+			Thread.sleep(3000);
+			System.out.println("To your right is a tall lamp that is currently turned off\n");
+			Thread.sleep(3000);
+			System.out.println("At your feet is a hairless overweight cat named Tibs\n");
+			Thread.sleep(3000);
+
+			//fist choice question
+			System.out.println("You ccan\n");
+
+			// first set of choices
+			System.out.println("A: Turn the alarm clock so you can see the time\n");
+			Thread.sleep(2500);					// slow down options to give ample time for the user to read options
+			System.out.println("B: Turn on your lamp\n");
+			Thread.sleep(2500);					// slow down options to give ample time for the user to read options
+			System.out.println("C: Attemp to toss Tibs off of you bed\n");
+			Thread.sleep(2500);					// slow down options to give ample time for the user to read options
+
+			System.out.println("Choose one\n");
+
             userInput = scanner.nextLine();
             if(isValid(userInput)){
                 break;
