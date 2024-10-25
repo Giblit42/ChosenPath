@@ -14,7 +14,8 @@ public class infoChain {
 		System.out.println("Username is: " + userName + "\n");
 
 		//start the story
-		System.out.println("Hello " + userName + " would you like to go on an adventure?\n");
+		System.out.println("Hello " + userName + " would you like to go on an adventure?");
+		System.out.println("please enter yes or no\n");
 		response = myObj.nextLine();
 		System.out.println("You chose " + response + "\n");
 
@@ -39,7 +40,7 @@ public class infoChain {
 		Thread.sleep(3000);
 
 		//fist choice question
-		System.out.println("You ccan\n");
+		System.out.println("You can\n");
 
 		// first set of choices
 		System.out.println("A: Turn the alarm clock so you can see the time\n");
@@ -50,8 +51,9 @@ public class infoChain {
 		Thread.sleep(2500);					// slow down options to give ample time for the user to read options
 
 		System.out.println("Choose one\n");
-		playerTurn(myObj);
-		response = myObj.nextLine();
+		playerTurn(myObj); //checks if answer is valid
+		response = myObj.nextLine(); // they have to enter in the same letter twice possible bug
+		
 
 		//Take new path
 		if(response.equals("A") || response.equals("a")){
@@ -85,6 +87,7 @@ public class infoChain {
             }
             
         }
+		System.out.println("please enter in same letter while computer thinks");
     }
 
 	private static boolean isValid(String userInput){
