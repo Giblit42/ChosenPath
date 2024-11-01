@@ -64,16 +64,52 @@ public class infoChain {
 		}
 		
 		if(response.equals("B") || response.equals("b")) {	//user choose b
-			System.out.println("You move closer to the foot of the bed and begin to stroke the fuzzy fat ball until you hear him begin to purr.\n");
+			System.out.println("You reach out and pull the small chain on your lamp and suddenly blast your eyes with a ray of light.\n");
 
 			Thread.sleep(2500);			// slow down options to give ample time for the user to read options
 			System.out.println("next branch from B");
 		}
 
 		if(response.equals("C") || response.equals("c")){
-			System.out.println("You close your eyes until you drift back off to sleep");
+			System.out.println("You attempt to nudge tibs with you feet but he won't budge.");
 			Thread.sleep(2500);
-			System.out.println("next branch from C");
+			// new choices for dealing with tibs
+			System.out.println("You can\n");
+
+			//choices for tibs
+			System.out.println("A: Slap him on the ass to get him to move\n");
+			Thread.sleep(2500);
+			System.out.println("B: Use more force with you feet to try and move him\n");
+			Thread.sleep(2500);
+			System.out.println("C: Bribe him with food\n");
+			Thread.sleep(2500);
+			System.out.println("Choose one\n");
+			playerTurn(myObj);
+			response = myObj.nextLine();
+
+			//Tibs path taken
+			if(response.equals("A") || response.equals("a")){
+				System.out.println("Slap Tim on the ass he wakes up to turn and scratch your arm\n");
+				System.out.println("You are now bleeding profusely.");
+				System.out.println("What will you do?");
+				Thread.sleep(2500);
+				System.out.println("Branch from getting scratched");
+			}
+
+			if(response.equals("B") || response.equals("b")){
+				System.out.println("You really begin to put effort into moving Tim to the side so you can get your feet out of bed\n");
+				System.out.println("However you forgot that Tim ways 500lbs and you hear a sudden snap followed by extream pain");
+				System.out.println("It has dawned on you that you broke both of your ankles trying to lift tim");
+				Thread.sleep(2500);
+				System.out.println("Branch from getting your ankles broken");
+			}
+
+			if(response.equals("C") || response.equals("c")){
+				System.out.println("You wisper in tims ear 'are you hungry?'\n");
+				System.out.println("Tim wakes from the dead of sleep and leaps of the bed with such speed and grace the 500 lb cat should not have");
+				Thread.sleep(2500);
+				System.out.println("Branch from feeding him early");
+			}
 		}
 	}
 
