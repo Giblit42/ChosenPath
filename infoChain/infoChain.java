@@ -100,13 +100,15 @@ public class infoChain {
 				System.out.println("You really begin to put effort into moving Tim to the side so you can get your feet out of bed\n");
 				System.out.println("However you forgot that Tim ways 500lbs and you hear a sudden snap followed by extream pain");
 				System.out.println("It has dawned on you that you broke both of your ankles trying to lift tim");
+				System.out.println("What will you do?\n");
 				Thread.sleep(2500);
 				System.out.println("Branch from getting your ankles broken");
 			}
 
 			if(response.equals("C") || response.equals("c")){
 				System.out.println("You wisper in tims ear 'are you hungry?'\n");
-				System.out.println("Tim wakes from the dead of sleep and leaps of the bed with such speed and grace the 500 lb cat should not have");
+				System.out.println("Tim wakes from the dead of sleep and leaps of the bed with such speed and grace the 500 lb cat should not have\n");
+				System.out.println("What will you do?\n");
 				Thread.sleep(2500);
 				System.out.println("Branch from feeding him early");
 			}
