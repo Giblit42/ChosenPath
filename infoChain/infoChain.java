@@ -22,7 +22,7 @@ public class infoChain {
 		// create the option of ending early
 		if(response.equals("No") || response.equals("no")) {	//check if user enters in lower or upper case response
 			System.out.println("Have a nice day");		// user decided not to play
-			return;
+			return; // this will end the program
 		}
 
 		// continue on with the adventure
@@ -59,12 +59,13 @@ public class infoChain {
 		if(response.equals("A") || response.equals("a")){
 			System.out.println("You turn the alram clock to see what time it is,and see that you have 3 more hours until you go into work\n");
 			Thread.sleep(2500);				// slow down options to give ample time for the user to read options
-
 			System.out.println("You Can");
 			alarmChoice();
 			playerTurn(myObj);
 			response = myObj.nextLine();
-			System.out.println("next branch looking at clock\n");
+			if(response.equals("A") || response.equals("a")){
+				sleepThreeHoursChoice();
+			}
 		}
 		
 		if(response.equals("B") || response.equals("b")) {	//user choose b
@@ -127,6 +128,20 @@ public class infoChain {
 		System.out.println("C: Reach for the remote to turn on the TV\n");
 		Thread.sleep(2500);
 		System.out.println("Choose one\n");
+	}
+
+	private static void sleepThreeHoursChoice() throws InterruptedException{
+		System.out.println("You sleep for 3 more hours and wake up when you hear your alarm go off\n");
+		Thread.sleep(2500);
+		System.out.println("You get dressed according to your usual schedule\n");
+		Thread.sleep(2000);
+		System.out.println("You then head out to work as normal\n");
+		Thread.sleep(2000);
+		System.out.println("You survived another day\n");
+		Thread.sleep(2000);
+		System.out.println("Congradulations you Win\n");
+		return;
+
 	}
 
 	private static void playerTurn(Scanner scanner){
