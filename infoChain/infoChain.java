@@ -60,7 +60,11 @@ public class infoChain {
 			System.out.println("You turn the alram clock to see what time it is,and see that you have 3 more hours until you go into work\n");
 			Thread.sleep(2500);				// slow down options to give ample time for the user to read options
 
-			System.out.println("next branch from A");
+			System.out.println("You Can");
+			alarmChoice();
+			playerTurn(myObj);
+			response = myObj.nextLine();
+			System.out.println("next branch looking at clock\n");
 		}
 		
 		if(response.equals("B") || response.equals("b")) {	//user choose b
@@ -113,6 +117,16 @@ public class infoChain {
 				System.out.println("Branch from feeding him early");
 			}
 		}
+	}
+
+	private static void alarmChoice() throws InterruptedException{
+		System.out.println("A: Sleep for another 3 hours\n");
+		Thread.sleep(2500);
+		System.out.println("B: You can get out of bed early\n");
+		Thread.sleep(2500);
+		System.out.println("C: Reach for the remote to turn on the TV\n");
+		Thread.sleep(2500);
+		System.out.println("Choose one\n");
 	}
 
 	private static void playerTurn(Scanner scanner){
